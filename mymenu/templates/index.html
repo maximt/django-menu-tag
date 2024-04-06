@@ -1,0 +1,25 @@
+{% load draw_menu %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+    <style>
+        .menu .current{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Page</h1>
+
+    <h3>Main Menu</h3>
+    {% draw_menu 'main_menu' %}
+
+    <h3>Second Menu</h3>
+    {% draw_menu 'second_menu' %}
+
+    {% block content %}
+    {% endblock  %}
+</body>
+</html>

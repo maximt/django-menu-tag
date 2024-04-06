@@ -1,0 +1,16 @@
+{% load draw_menu %}
+
+<ul class="menu">
+    {% for item in menu %}
+        <li>
+            {% if forloop.first %}┌{% endif %}{% if not forloop.first and not forloop.last %}├{% endif %}{% if forloop.last %}└{% endif %}{% draw_depth item.depth %}
+            {% with url=item.get_url %}
+            {% if url %}
+            <a href="{{ url }}" class="{% if url == current_url %}current{% endif %}">{{ item.title }}</a>
+            {% else %}
+            <span>{{ item.title }}</span>
+            {% endif %}
+            {% endwith %}
+        </li>
+    {% endfor %}
+</ul>

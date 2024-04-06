@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "menu-app"
+version = "0.1.0"
+description = ""
+authors = ["maximt <vbmaxim@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.4"
+django-debug-toolbar = "^4.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+django-stubs = {version = "^4.2.7", extras = ["compatible-mypy"]}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
